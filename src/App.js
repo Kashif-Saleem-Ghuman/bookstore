@@ -6,19 +6,22 @@ import Categories from './Components/Categories';
 function App() {
   return (
     <>
-      <nav>
-        <ul>
+      <nav className="Nav-bar">
+        <h1>
+          Bookstore CMS
+        </h1>
+        <ul className="ul">
           <li>
-            <Link to="/books"> Books</Link>
+            <Link className="li-app" to="/books"> Books</Link>
           </li>
           <li>
-            <Link to="/categories">Categories</Link>
+            <Link className="li-app" to="/categories">Categories</Link>
           </li>
 
         </ul>
       </nav>
       <Routes>
-        <Route path="/books" element={<Books />} />
+        <Route path="/books" element={<Books title="Harry Potter" />} />
         <Route path="/categories" element={<Categories />} />
       </Routes>
     </>
