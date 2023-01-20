@@ -12,7 +12,7 @@ function App() {
         </h1>
         <ul className="ul">
           <li>
-            <Link className="li-app" to="/books"> Books</Link>
+            <Link className="li-app" to="/"> Books</Link>
           </li>
           <li>
             <Link className="li-app" to="/categories">Categories</Link>
@@ -21,7 +21,7 @@ function App() {
         </ul>
       </nav>
       <Routes>
-        <Route path="/books" element={<Books title="Harry Potter" />} />
+        <Route path="/" element={<Books title="Harry Potter" />} />
         <Route path="/categories" element={<Categories />} />
       </Routes>
     </>
