@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src="./images/murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src=".src/images/murple_logo.png" alt="logo" width="140"  height="auto" />
   
   <br/>
 
@@ -164,9 +164,8 @@ Give a ⭐️ if you like this project!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-[Webpack](https://webpack.js.org/))
-
-
+[React](https://reactjs.org/)
+[Microverse](https://www.microverse.org)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
