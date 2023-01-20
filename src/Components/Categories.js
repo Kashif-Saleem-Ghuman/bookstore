@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 export default function Categories() {
   return (
-    
-    <button>Check Status</button>
-  )
+
+    <button type="submit">Check Status</button>
+  );
 }
