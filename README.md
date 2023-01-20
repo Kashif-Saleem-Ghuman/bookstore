@@ -2,7 +2,7 @@
 
 <div align="center">
 
-  <img src=".src/images/murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="./src/images/murple_logo.png" alt="logo" width="140"  height="auto" />
   
   <br/>
 
