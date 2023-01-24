@@ -1,4 +1,5 @@
-import types from '../types';
+// Action types
+const CHECK_STATUS = 'check status';
 
 const initialState = {
   categories: [],
@@ -7,17 +8,17 @@ const initialState = {
 // Action Creators
 
 export const checkStatus = () => ({
-  type: types.CHECK_STATUS,
+  type: CHECK_STATUS,
 });
 
 // Reducers
 
 const categoriesReducer = (state = initialState, action) => {
   switch (action.type) {
-    case types.CHECK_STATUS:
+    case CHECK_STATUS:
       return {
         ...state,
-        categories: [...state.categories, ''],
+        categories: [...state.categories, 'Under construction'],
       };
     default:
       return state;

@@ -1,4 +1,6 @@
-import types from '../types';
+// action types
+const ADDED_BOOK = 'book added';
+const DELETED_BOOK = 'book deleted';
 
 // Initial state of books
 
@@ -9,12 +11,12 @@ const initialState = {
 // Action Creators
 
 export const addedBook = (bookadded) => ({
-  type: types.ADDED_BOOK,
+  type: ADDED_BOOK,
   payload: bookadded,
 });
 
 export const removeBook = (bookremoved) => ({
-  type: types.ADDED_BOOK,
+  type: ADDED_BOOK,
   payload: bookremoved,
 });
 
@@ -22,12 +24,12 @@ export const removeBook = (bookremoved) => ({
 
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
-    case types.ADDED_BOOK:
+    case ADDED_BOOK:
       return {
         ...state,
         books: [...state.books, action.bookadded],
       };
-    case types.DELETED_BOOK:
+    case DELETED_BOOK:
       return {
         ...state,
         books: [...state.books, action.bookremoved],
