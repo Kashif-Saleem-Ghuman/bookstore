@@ -1,5 +1,5 @@
 // Action types
-const CHECK_STATUS = 'check status';
+const CHECK_STATUS = 'redux/books/CHECK_STATUS';
 
 const initialState = {
   categories: [],

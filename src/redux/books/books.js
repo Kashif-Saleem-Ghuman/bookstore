@@ -1,6 +1,6 @@
 // action types
-const ADDED_BOOK = 'book added';
-const DELETED_BOOK = 'book deleted';
+const ADDED_BOOK = 'redux/books/ADDED_BOOK';
+const DELETED_BOOK = 'redux/books/DELETED_BOOK';
 
 // Initial state of books
 
@@ -16,7 +16,7 @@ export const addedBook = (bookadded) => ({
 });
 
 export const removeBook = (bookremoved) => ({
-  type: ADDED_BOOK,
+  type: DELETED_BOOK,
   payload: bookremoved,
 });
 
