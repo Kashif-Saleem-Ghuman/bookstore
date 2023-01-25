@@ -4,9 +4,23 @@ const DELETED_BOOK = 'redux/books/DELETED_BOOK';
 
 // Initial state of books
 
-const initialState = {
-  books: [],
-};
+const initialState = [
+  {
+    id: '0',
+    title: 'Harry Potter',
+    author: 'JK Rowling',
+  },
+  {
+    id: '1',
+    title: 'Book 2 ',
+    author: 'John',
+  },
+  {
+    id: '2',
+    title: 'Book 3 ',
+    author: 'Doe',
+  },
+];
 
 // Action Creators
 
@@ -15,9 +29,9 @@ export const addedBook = (bookadded) => ({
   payload: bookadded,
 });
 
-export const removeBook = (bookremoved) => ({
+export const removeBook = (id) => ({
   type: DELETED_BOOK,
-  payload: bookremoved,
+  payload: id,
 });
 
 // Reducers
@@ -25,15 +39,12 @@ export const removeBook = (bookremoved) => ({
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADDED_BOOK:
-      return {
+      return [
         ...state,
-        books: [...state.books, action.bookadded],
-      };
+        action.payload,
+      ];
     case DELETED_BOOK:
-      return {
-        ...state,
-        books: [...state.books, action.bookremoved],
-      };
+      return state.filter((book) => book.id !== action.payload);
     default:
       return state;
   }

@@ -21,7 +21,7 @@ function App() {
         </ul>
       </nav>
       <Routes>
-        <Route path="/" element={<Books title="Harry Potter" />} />
+        <Route path="/" element={<Books />} />
         <Route path="/categories" element={<Categories />} />
       </Routes>
     </>
