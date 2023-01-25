@@ -13,7 +13,6 @@ export default function Books() {
 
   return (
     <>
-      <div className="container"><AddBook /></div>
       <div className="container">
         <div className="my-4 border border-3 p-0">
           <div>
@@ -42,6 +41,7 @@ export default function Books() {
           </div>
         </div>
       </div>
+      <div className="container"><AddBook /></div>
     </>
   );
 }
