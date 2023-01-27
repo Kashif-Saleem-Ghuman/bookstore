@@ -89,12 +89,12 @@ export default function Books() {
                 </div>
               </div>
               <div className="">
-                <div style={{ width: 80, height: 80 }}>
+                <div className="circular-bar">
                   <CircularProgressbar value={percentage} />
                 </div>
                 <div>
                   <h2>{`${percentage}%`}</h2>
-                  <h4 style={{ color: '#979197' }}>Completed</h4>
+                  <h4 className="circular-bar-h4">Completed</h4>
                 </div>
               </div>
               <div>
