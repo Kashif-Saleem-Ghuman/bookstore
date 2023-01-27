@@ -98,15 +98,15 @@ export default function Books() {
                 </div>
               </div>
               <div>
-                <div>
-                  <p>Current Chapter</p>
-                  <p>
-                    chapter:
+                <div className="current-chapter-container">
+                  <p className="current-chapter-label">Current Chapter</p>
+                  <p className="current-chapter">
+                    Chapter:
                     {`${chapter}`}
                   </p>
                 </div>
                 <div>
-                  <button type="submit">
+                  <button type="submit" className="primary-button">
                     Update Progress
                   </button>
                 </div>
