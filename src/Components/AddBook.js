@@ -1,4 +1,7 @@
 import { React, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { addBooks } from '../redux/books/AddBook';
 // import { addedBook } from '../redux/books/books';
 
 export default function AddBook() {
@@ -6,9 +9,24 @@ export default function AddBook() {
   const [author, setauthor] = useState('');
   // const id = Math.random().toString();
 
+  const dispatch = useDispatch();
+  const category = 'fiction';
   // dispatch fetchbooks on clcik of add button
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (title.trim() && author.trim()) {
+      dispatch(addBooks({
+        item_id: uuidv4(),
+        title,
+        author,
+        category,
+      }));
+      settitle('');
+      setauthor('');
+    } else {
+      // eslint-disable-next-line
+      alert('Please write book title and author name and select a category!');
+    }
   };
 
   return (

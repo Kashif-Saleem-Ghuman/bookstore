@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import AddBook from './AddBook';
 import { fetchBooks } from '../redux/books/fetchapi';
+import { removeBooks } from '../redux/books/DeleteBokk';
 
 export default function Books() {
   // consuming state
@@ -14,35 +15,23 @@ export default function Books() {
     isLoading,
     error,
   } = useSelector((state) => state.apiReducer);
-  console.log('This is data: ', data);
+
   const bookArr = [];
+  // converting the data into an array
   Object.entries(data).forEach(([key, value]) => {
     const book = value[0];
     const id = { id: key };
     bookArr.push({ ...book, ...id });
   });
 
-  // Object.entries(data).forEach(([key, value]) => {
-  //   const bookObj = value[0];
-  //   const idObj = { id: key };
-  //   bookArr.push(...bookObj, ...idObj);
-  // });
   useEffect(() => {
     dispatch(fetchBooks());
   }, [dispatch]);
-  // const dispatch = useDispatch();
 
-  // const handleDelete = (id) => {
-  //   dispatch(removeBook(id));
-  // };
-  // if (booksFetch.isLoading) {
-  //   return <h2>Loading...</h2>;
-  // }
-  // if (booksFetch.isLoading) {
-  //   return <h2>Loading...</h2>;
-  // }
-  console.log('this is booksFetch:', data);
-  console.log('BookArr:', bookArr);
+  const handleDelete = (id) => {
+    dispatch(removeBooks(id));
+  };
+
   if (isLoading === 'loading') {
     return <h2>Loading...</h2>;
   }
@@ -79,7 +68,24 @@ export default function Books() {
           </div> */
           bookArr.map((e) => (
             <div key={data.id} className="d-flex justify-content-between ms-0 p-3">
-              {e.title}
+              <span>
+                Title:
+                {' '}
+                {e.title}
+              </span>
+              <span>
+                Author:
+                {' '}
+                {e.author}
+              </span>
+              <button
+                className="btn btn-primary mb-3"
+                type="submit"
+                onClick={() => { handleDelete(e.id); }}
+              >
+                Remove
+
+              </button>
             </div>
           ))
           }
