@@ -11,6 +11,7 @@ export default function Books() {
   // const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
   const percentage = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
+  const chapter = Math.floor((Math.random() * Math.floor((percentage / 5)))) + 1;
 
   const {
     data,
@@ -46,7 +47,7 @@ export default function Books() {
         <div className="my-4 p-0 add-gap">
           {
           bookArr.map((e) => (
-            <div key={data.id} className="d-flex justify-content-between ms-0 p-3 book">
+            <div key={data.id} className="ms-0 p-3 book">
               <div className="book-info">
                 <h4 className="book-category">
                   {' '}
@@ -94,6 +95,20 @@ export default function Books() {
                 <div>
                   <h2>{`${percentage}%`}</h2>
                   <h4 style={{ color: '#979197' }}>Completed</h4>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <p>Current Chapter</p>
+                  <p>
+                    chapter:
+                    {`${chapter}`}
+                  </p>
+                </div>
+                <div>
+                  <button type="submit">
+                    Update Progress
+                  </button>
                 </div>
               </div>
             </div>
