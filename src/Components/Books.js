@@ -1,14 +1,16 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-// import { CircularProgressbar } from 'react-circular-progressbar';
+import { CircularProgressbar } from 'react-circular-progressbar';
 import AddBook from './AddBook';
 import { fetchBooks } from '../redux/books/fetchapi';
 import { removeBooks } from '../redux/books/DeleteBokk';
+import 'react-circular-progressbar/dist/styles.css';
 
 export default function Books() {
   // consuming state
   // const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
+  const percentage = Math.floor(Math.random() * (100 - 1 + 1)) + 1;
 
   const {
     data,
@@ -85,12 +87,15 @@ export default function Books() {
                   </button>
                 </div>
               </div>
-              <div className="progress-counter">
-                <div />
-                <div />
-                <div />
+              <div className="">
+                <div style={{ width: 80, height: 80 }}>
+                  <CircularProgressbar value={percentage} />
+                </div>
+                <div>
+                  <h2>{`${percentage}%`}</h2>
+                  <h4 style={{ color: '#979197' }}>Completed</h4>
+                </div>
               </div>
-
             </div>
           ))
           }
