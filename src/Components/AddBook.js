@@ -7,11 +7,9 @@ import { addBooks } from '../redux/books/AddBook';
 export default function AddBook() {
   const [title, settitle] = useState('');
   const [author, setauthor] = useState('');
-  // const id = Math.random().toString();
-
   const dispatch = useDispatch();
   const category = 'fiction';
-  // dispatch fetchbooks on clcik of add button
+  // dispatch fetchbooks on click of add button
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title.trim() && author.trim()) {
@@ -24,8 +22,8 @@ export default function AddBook() {
       settitle('');
       setauthor('');
     } else {
-      // eslint-disable-next-line
-      alert('Please write book title and author name and select a category!');
+      // eslint-disable-next-line no-alert
+      alert('Please enter book title and author name!');
     }
   };
 

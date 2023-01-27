@@ -1,5 +1,4 @@
 import { useSelector, useDispatch } from 'react-redux';
-// import { removeBook } from '../redux/books/books';
 import { useEffect } from 'react';
 import AddBook from './AddBook';
 import { fetchBooks } from '../redux/books/fetchapi';
@@ -42,30 +41,7 @@ export default function Books() {
     <>
       <div className="container">
         <div className="my-4 border border-3 p-0">
-          {/* <div>
-            {booksFetch.map((book) => (
-              <div key={book.id} className="d-flex justify-content-between ms-0 p-3">
-                <span>
-                  Title:
-                  {' '}
-                  {book.title}
-                </span>
-                <span>
-                  Author:
-                  {' '}
-                  {book.author}
-                </span>
-                <button
-                  className="btn btn-primary mb-3"
-                  type="submit"
-                  onClick={() => { handleDelete(book.id); }}
-                >
-                  Remove
-
-                </button>
-              </div>
-            ))}
-          </div> */
+          {
           bookArr.map((e) => (
             <div key={data.id} className="d-flex justify-content-between ms-0 p-3">
               <span>
