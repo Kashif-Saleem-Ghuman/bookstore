@@ -45,7 +45,7 @@ export default function Books() {
           {
           bookArr.map((e) => (
             <div key={data.id} className="d-flex justify-content-between ms-0 p-3 book">
-              <div className="">
+              <div className="book-info">
                 <h4 className="book-category">
                   {' '}
                   {e.category}

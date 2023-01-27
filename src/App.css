@@ -106,6 +106,7 @@ h1 {
   font-family: "Montserrat",sans-serif;
   font-size: 0.875rem;
   opacity: 0.5;
+  padding-left: 0.5vw;
 }
 
 .book-title {
@@ -115,6 +116,7 @@ h1 {
   letter-spacing: -0.2px;
   font-weight: 700;
   color: #121212;
+  padding-left: 0.5vw;
 }
 
 .book-author {
@@ -122,6 +124,7 @@ h1 {
   font-weight: 300;
   color: #4386bf;
   font-family: "Roboto Slab", serif;
+  padding-left: 0.5vw;
 }
 
 .button-outline {
@@ -159,4 +162,10 @@ h1 {
   grid-gap: 20px;
   gap: 20px;
   width: 14rem;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
