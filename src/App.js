@@ -10,15 +10,16 @@ function App() {
         <h1>
           Bookstore CMS
         </h1>
-        <ul className="ul">
+        <ul className="ul p-0 m-0 active-link">
           <li>
-            <Link className="li-app" to="/"> Books</Link>
+            <Link className="li-app" to="/"> BOOKS</Link>
           </li>
           <li>
-            <Link className="li-app" to="/categories">Categories</Link>
+            <Link className="li-app" to="/categories">CATEGORIES</Link>
           </li>
 
         </ul>
+        <button className="icon-button" type="button"><span className="material-icons primary-color">person</span></button>
       </nav>
       <Routes>
         <Route path="/" element={<Books />} />

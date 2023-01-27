@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+// import { CircularProgressbar } from 'react-circular-progressbar';
 import AddBook from './AddBook';
 import { fetchBooks } from '../redux/books/fetchapi';
 import { removeBooks } from '../redux/books/DeleteBokk';
@@ -40,28 +41,55 @@ export default function Books() {
   return (
     <>
       <div className="container">
-        <div className="my-4 border border-3 p-0">
+        <div className="my-4 p-0 add-gap">
           {
           bookArr.map((e) => (
-            <div key={data.id} className="d-flex justify-content-between ms-0 p-3">
-              <span>
-                Title:
+            <div key={data.id} className="d-flex flex-column justify-content-between ms-0 p-3 book">
+              <h4 className="book-category">
+                {' '}
+                {e.category}
+              </h4>
+              <h2 className="book-title">
                 {' '}
                 {e.title}
-              </span>
-              <span>
-                Author:
+              </h2>
+              <h6 className="book-author">
                 {' '}
                 {e.author}
-              </span>
-              <button
-                className="btn btn-primary mb-3"
-                type="submit"
-                onClick={() => { handleDelete(e.id); }}
-              >
-                Remove
+              </h6>
+              <div className="action-buttons">
+                <button
+                  className="button-outline"
+                  type="submit"
+                >
+                  Comments
 
-              </button>
+                </button>
+                <div className="vertical-divider" />
+                <button
+                  className="button-outline"
+                  type="submit"
+                  onClick={() => { handleDelete(e.id); }}
+                >
+                  Remove
+
+                </button>
+                <div className="vertical-divider" />
+                <button
+                  className="button-outline"
+                  type="submit"
+                >
+                  Edit
+
+                </button>
+                <div className="vertical-divider" />
+              </div>
+              <div className="progress-counter">
+                <div />
+                <div />
+                <div />
+              </div>
+
             </div>
           ))
           }
