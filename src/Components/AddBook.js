@@ -1,16 +1,14 @@
 import { React, useState } from 'react';
-import { useDispatch } from 'react-redux';
 // import { addedBook } from '../redux/books/books';
-import { fetchBooks } from '../redux/books/fetchapi';
 
 export default function AddBook() {
   const [title, settitle] = useState('');
   const [author, setauthor] = useState('');
   // const id = Math.random().toString();
-  const dispatch = useDispatch();
+
+  // dispatch fetchbooks on clcik of add button
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(fetchBooks());
   };
 
   return (
