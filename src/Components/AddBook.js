@@ -7,8 +7,8 @@ import { addBooks } from '../redux/books/AddBook';
 export default function AddBook() {
   const [title, settitle] = useState('');
   const [author, setauthor] = useState('');
+  const [category, setcategory] = useState('Fiction');
   const dispatch = useDispatch();
-  const category = 'fiction';
   // dispatch fetchbooks on click of add button
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,6 +21,7 @@ export default function AddBook() {
       }));
       settitle('');
       setauthor('');
+      setcategory('');
     } else {
       // eslint-disable-next-line no-alert
       alert('Please enter book title and author name!');
@@ -29,15 +30,15 @@ export default function AddBook() {
 
   return (
     <div>
-      <h2 className="fs-2 text">Add New Book</h2>
-      <form className="row g-3">
-        <div className="col-7">
-          <input type="text" className="form-control" value={title} onChange={(e) => settitle(e.target.value.slice(0, 1).toUpperCase() + e.target.value.slice(1, e.target.value.length).toLocaleLowerCase())} id="inputPassword2" placeholder="Book Title" required />
-        </div>
-        <div className="col-3">
-          <input type="text" className="form-control" value={author} onChange={(e) => setauthor(e.target.value.slice(0, 1).toUpperCase() + e.target.value.slice(1, e.target.value.length).toLocaleLowerCase())} id="inputPassword2" placeholder="Book Author" required />
+      <h2 className="fs-2 text margin-h2">Add New Book</h2>
+      <form className="row g-4">
+        <div className="col-8">
+          <input type="text" className="form-control" value={title} onChange={(e) => settitle(e.target.value)} id="inputPassword2" placeholder="Book Title" required />
         </div>
         <div className="col-2">
+          <input type="text" className="form-control" value={author} onChange={(e) => setauthor(e.target.value)} id="inputPassword2" placeholder="Book Author" required />
+        </div>
+        <div className="col-2 button">
           <button type="submit" className="btn btn-primary mb-3" onClick={handleSubmit}>Add Book</button>
         </div>
       </form>

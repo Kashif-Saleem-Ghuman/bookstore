@@ -1,28 +1,54 @@
+:root {
+  --display-flex: flex;
+}
+
 .Nav-bar {
-  display: flex;
-  justify-content: flex-start;
+  padding: 24px 4%;
+  background-color: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  display: var(--display-flex);
   align-items: center;
-  gap: 2vw;
-  padding: 1vw;
+  gap: 40px;
+}
+
+.book {
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  padding: 2rem;
+  display: var(--display-flex);
+  justify-content: space-between;
+}
+
+.add-gap {
+  display: var(--display-flex);
+  flex-direction: column;
+  gap: 0.98rem;
 }
 
 .ul {
-  display: flex;
-  gap: 1vw;
-  list-style: none;
-}
-
-.li-app {
-  text-decoration: none;
-  color: black;
+  display: var(--display-flex);
+  flex-grow: 1;
+  list-style-type: none;
+  grid-gap: 40px;
+  gap: 40px;
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.813rem;
+  color: #121212;
+  letter-spacing: 1.9px;
 }
 
 h1 {
-  color: rgb(64, 91, 213);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #0290ff;
+  margin: 0;
 }
 
 .ul-books {
-  display: flex;
+  display: var(--display-flex);
   flex-direction: column;
   justify-content: space-between;
   padding: 2vw;
@@ -30,6 +56,165 @@ h1 {
 }
 
 .li-books {
-  display: flex;
+  display: var(--display-flex);
   justify-content: space-between;
+}
+
+.button {
+  position: absolute;
+  right: 2vw;
+}
+
+.container-new {
+  max-width: 95%;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  padding: 2rem;
+  margin: 0;
+}
+
+.icon-button {
+  cursor: pointer;
+  width: 2.813rem;
+  height: 2.813rem;
+  border-radius: 50%;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+}
+
+.primary-color {
+  color: #0290ff;
+}
+
+.material-icons {
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.book-category {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  opacity: 0.5;
+  padding-left: 0.5vw;
+}
+
+.book-title {
+  font-family: "Roboto Slab", serif;
+  margin-top: 0.188rem;
+  font-size: 1.375rem;
+  letter-spacing: -0.2px;
+  font-weight: 700;
+  color: #121212;
+  padding-left: 0.5vw;
+}
+
+.book-author {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+  font-family: "Roboto Slab", serif;
+  padding-left: 0.5vw;
+}
+
+.button-outline {
+  font-family: "Roboto Slab", serif;
+  background-color: transparent;
+  border: none;
+  color: #4386bf;
+  font-size: 0.875rem;
+  font-weight: 300;
+  align-items: center;
+  cursor: pointer;
+}
+
+.vertical-divider {
+  width: 0.125rem;
+  height: 1.5rem;
+  background-color: #e8e8e8;
+  margin: 0 1rem;
+}
+
+.action-buttons {
+  display: var(--display-flex);
+  align-items: center;
+  margin-top: 1.313rem;
+}
+
+.card-wrapper {
+  display: var(--display-flex);
+  justify-content: space-between;
+}
+
+.current-chapter-container {
+  display: var(--display-flex);
+  flex-direction: column;
+  grid-gap: 20px;
+  gap: 20px;
+  width: 14rem;
+}
+
+.book-info {
+  display: var(--display-flex);
+  flex-direction: column;
+  width: 26%;
+}
+
+.current-chapter-label {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  color: #121212;
+}
+
+.current-chapter {
+  margin-top: 0.438rem;
+  font-size: 1rem;
+  letter-spacing: -0.4px;
+}
+
+.primary-button {
+  cursor: pointer;
+  border: none;
+  background-color: #0290ff;
+  border-radius: 3px;
+  padding: 8px 24px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
+
+.li-app {
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.813rem;
+  color: #121212;
+  letter-spacing: 1.9px;
+  text-decoration: none;
+}
+
+.li-app:focus {
+  opacity: 1;
+  color: #121212;
+}
+
+.circular-bar {
+  width: 60px;
+  height: 60px;
+}
+
+.circular-bar-h4 {
+  color: #979197;
 }
