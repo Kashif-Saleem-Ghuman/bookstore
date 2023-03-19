@@ -86,7 +86,7 @@ Add a new books or delete a book to and from the list.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-none
+https://kashifbookstore.netlify.app/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
